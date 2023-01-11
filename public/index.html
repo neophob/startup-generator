@@ -1,4 +1,10 @@
-<!doctype html><html><head><title>Startup Slogan Generator</title><meta charset="utf-8"><script id="fxhash-snippet">//---- do not edit the following code (you can indent as you wish)
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Startup Slogan Generator</title>
+    <meta charset="utf-8">
+    <script id="fxhash-snippet">
+      //---- do not edit the following code (you can indent as you wish)
       let alphabet = "123456789abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ"
       var fxhash = "oo" + Array(49).fill(0).map(_=>alphabet[(Math.random()*alphabet.length)|0]).join('')
       let b58dec = (str) => str.split('').reduce((p,c,i) => p + alphabet.indexOf(c) * (Math.pow(alphabet.length, str.length-i-1)), 0)
@@ -18,7 +24,16 @@
         }
       }
       var fxrand = sfc32(...hashes)
-      //---- /do not edit the following code</script><link rel="stylesheet" href="./style.css"></head><body><canvas id="canvas" style="width: 100%; height: 100%; padding: 0; margin: 0;"></canvas><script>//javascript:(function(){var script=document.createElement('script');script.onload=function(){var stats=new Stats();document.body.appendChild(stats.dom);requestAnimationFrame(function loop(){stats.update();requestAnimationFrame(loop)});};script.src='//mrdoob.github.io/stats.js/build/stats.min.js';document.head.appendChild(script);})()
+      //---- /do not edit the following code
+    </script>
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- if you need to import js scripts do it here -->
+  </head>
+  <body>
+    <canvas id="canvas" style="width: 100%; height: 100%; padding: 0; margin: 0;"></canvas>
+    <script>
+        //javascript:(function(){var script=document.createElement('script');script.onload=function(){var stats=new Stats();document.body.appendChild(stats.dom);requestAnimationFrame(function loop(){stats.update();requestAnimationFrame(loop)});};script.src='//mrdoob.github.io/stats.js/build/stats.min.js';document.head.appendChild(script);})()
 
         var a = document.getElementById("canvas");
         var b = document.body;
@@ -32,4 +47,10 @@
           function(f){ setTimeout(f, 1000/30); };
 
         var c = a.getContext('2d');
-        c.imageSmoothingEnabled = false;</script><script defer="defer" src="./bundle.js"></script></body></html>
+        c.imageSmoothingEnabled = false;
+
+</script>
+    <!-- WEBPACK will inject the bundle.js here -->
+
+  </body>
+</html>
